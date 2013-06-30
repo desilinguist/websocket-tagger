@@ -2,7 +2,7 @@
 ==========
 
 #### Description
-This project provides a [WebSocket](http://en.wikipedia.org/wiki/WebSocket) server that wraps the [Stanford Part-of-Speech tagger](http://nlp.stanford.edu/software/tagger.shtml). This makes it easier to get part-of-speech tags from JavaScript for arbitrary text. Please note that this project is just a a that illustrates the utility of WebSockets for NLP.
+This project provides a [WebSocket](http://en.wikipedia.org/wiki/WebSocket) server that wraps the [Stanford Part-of-Speech tagger](http://nlp.stanford.edu/software/tagger.shtml). This makes it easier to get part-of-speech tags from JavaScript for arbitrary text. Please note that this project is just a prototype that illustrates the utility of WebSockets for NLP.
 
 #### Requirements
 - Java
