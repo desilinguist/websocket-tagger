@@ -9,7 +9,7 @@ This project provides a [WebSocket](http://en.wikipedia.org/wiki/WebSocket) serv
 - Ant
 - [Stanford CoreNLP](http://nlp.stanford.edu/software/corenlp.shtml)
 - [Java WebSocket](https://github.com/TooTallNate/Java-WebSocket)
-- A modern browser that supports WebSockets (See (http://caniuse.com/websockets)). I recommend the latest version of [Mozilla Firefox](http://www.getfirefox.com).
+- A modern browser that supports WebSockets (See http://caniuse.com/websockets). I recommend the latest version of [Mozilla Firefox](http://www.getfirefox.com).
 
 #### Installation:
 1. Clone the Java WebSocket [repository](https://github.com/TooTallNate/Java-WebSocket) and build `java_websocket.jar` (you may also download the jar directly from the repository). Add this jar to your CLASSPATH.
