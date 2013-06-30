@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel=stylesheet type="text/css" href="tag.css">
+<title>Stanford Tagger WebSocket Server Test Page</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+</head>
+
+<body>
+<br/>
+<div align="center" id="title" style="font-size: 28px;">Stanford Tagger Test</div>
+<br/>
+
+<div id="formContainer" name="formContainer">
+    <form>
+    <p id="textBoxContainer">
+    <span class="textBoxLabel">Enter some text:</span><br/><br/>
+    <textarea name="textBox" id="textBox" rows="10" cols="80" style="padding: 5px;"></textarea>
+    </p>
+    <br/>
+    <div style="text-align: center;">
+    <input type="button" value="Tag" id="tagButton" name="tagButton"/>
+    </div>
+    </form>
+</div>
+<br/>
+<div id="outputContainer" name="outputContainer" style="text-align: left;">
+    <p name='output' id="output" style="white-space: pre-wrap; font-family: Courier; font-size: 13px; width: 700px;"></p>
+</div>
+</div>
+
+<script>
+$(document).ready(function() {
+
+    if (!window.WebSocket) {
+        alert("FATAL: WebSocket not natively supported. This demo will not work!");
+    }
+
+    // Create a websocket connection
+    var ws = new WebSocket("ws://localhost:9090");
+
+    // set up the event handler for when the connection is opened
+    ws.onopen = function() {
+        console.log("Opened connection");
+    }
+
+    // set up the event handler for when we get a message
+    // from the server (show it on the webpage)
+    ws.onmessage = function(e) {
+        var elt = document.getElementById('output')
+        var sentences = e.data.trim().split('\n')
+        var toShow = ""
+        for (si in sentences) {
+            toShow += "(" + (parseInt(si) + 1) + ") " + sentences[si] + "\n\n";
+        }
+        elt.innerHTML = '<b>Tagged sentences:</b>\n\n' + toShow;
+    }
+
+    // event handler when we close
+    ws.onclose = function() {
+        console.log("Closed connection");
+        ws = null;
+    }
+
+    // event handler when we click the tag button
+    // sends whatever is in the textbox to the server
+    $('#tagButton').click(function(e) {
+        var elt = document.getElementById('output')
+        elt.innerHTML = "";
+        if (ws) {
+            ws.send($('#textBox').val());
+        }
+    });
+});
+</script>
+</body>
+</html>

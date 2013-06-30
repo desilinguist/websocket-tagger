@@ -1,0 +1,17 @@
+<project default="compile">
+
+	<property environment="env"/>
+	<path id="libs.classpath">
+		<pathelement path="${env.CLASSPATH}" />
+	</path>
+
+	<target name="compile">
+		<javac includeantruntime="false" debug="true" srcdir="." destdir="." classpathref="libs.classpath" >
+			<include name="StanfordTaggerServer.java" />
+		</javac>
+	</target>
+
+	<target name="clean">
+		<delete file="StanfordTaggerServer.class" />
+	</target>
+</project>

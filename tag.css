@@ -1,0 +1,19 @@
+body {
+    background-color: #fffae6;
+    width: 700px;
+    margin: 0px auto;
+    font-family: Georgia, Optima, Palatino, Verdana, Arial, sans-serif;
+}
+
+input#tagButton {
+    font-size: 16px;
+    font-weight: bold;
+    height: 40px;
+    width: 120px;
+}
+
+span.textBoxLabel {
+    font-family: Georgia;
+    font-size: 16px;
+    font-weight: bold;
+}
