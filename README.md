@@ -19,6 +19,10 @@ This project provides a [WebSocket](http://en.wikipedia.org/wiki/WebSocket) serv
 5. Load `tag.html` into Firefox.
 6. Tag away.
 
+#### Screenshot:
+Here's a screenshot of the jQuery powered `tag.html` page in action:
+![screenshot](websocket-screenshot.png "Screenshot")
+
 ##### Notes:
 Please note that currently the server needs to be killed manually since this is what I want. Obviously, this can be easily changed with the same thinking that goes into how to properly kill a regular socket server.
 
