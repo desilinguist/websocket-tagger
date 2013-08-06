@@ -19,10 +19,12 @@ This project provides a [WebSocket](http://en.wikipedia.org/wiki/WebSocket) serv
 5. Load `tag.html` into Firefox.
 6. Tag away.
 
+#### Notes:
+1. Please note that currently the server needs to be killed manually since this is what I want. Obviously, this can be easily changed with the same thinking that goes into how to properly kill a regular socket server.
+2. It should be simple to extend the server to do anything else CoreNLP can do besides tagging.
+
 #### Screenshot:
 Here's a screenshot of the jQuery powered `tag.html` page in action:
 ![screenshot](websocket-screenshot.png "Screenshot")
 
-##### Notes:
-Please note that currently the server needs to be killed manually since this is what I want. Obviously, this can be easily changed with the same thinking that goes into how to properly kill a regular socket server.
 
