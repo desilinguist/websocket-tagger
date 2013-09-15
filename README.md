@@ -1,3 +1,5 @@
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/desilinguist/websocket-tagger/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
 ### websocket-tagger
 ==========
 
@@ -27,8 +29,4 @@ This project provides a [WebSocket](http://en.wikipedia.org/wiki/WebSocket) serv
 Here's a screenshot of the jQuery powered `tag.html` page in action:
 ![screenshot](websocket-screenshot.png "Screenshot")
 
-
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/desilinguist/websocket-tagger/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
